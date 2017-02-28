@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Sources List Generator for Debian</title>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="author" content="Stephan Jau">
+		<meta name="Publisher" content="Stephan Jau">
+		<meta name="keywords" content="Debian, Server, Repository, Generator, Sources, Sources List, deb, deb-src, Linux, distro, distribution">
+		<meta name="description" content="Sources List Generator for Debian. It features the official Debian repositories as well as other 3rd party repos.">
+		<meta name="Content-Language" content="en">
+		<meta name="Distribution" content="Local">
+		<meta name="Rating" content="General">
+
+		<meta name="Robots" content="INDEX,FOLLOW">
+		<meta name="Revisit-after" content="31 Days">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro">
+		<script src="js/jquery.js"></script>
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<script>
+			function brokenRepo(id)
+			{
+				if(confirm("Would you like to report this repo as broken?"))
+				{
+						$.post( "api.php?brokenRepo", { id: id } );
+						alert("Thank you! We will fix the problem as soon as possible!");
+				}
+			}
+		</script>
+		<main>
+			<div class="wrap--header">
+				<div class="wrap">
+					<h2 class="header">Debian Sources List Generator</h2>
+					<div style="right:0;">
+						<a href="." class="link">Home</a>
+						|
+						<a href="./?changes" class="link">Last Changes</a>
+						|
+						<a href="./?feedback" class="link">New Repo / Feedback</a>
+						|
+						<a href="https://repogen.simplylinux.ch/" class="link">RepoGen (Ubuntu)</a>
+						|
+						<a href="https://stats.simplylinux.ch/index.php?module=CoreHome&action=index&idSite=3&period=day&date=yesterday#/module=Dashboard&action=embeddedIndex&idSite=3&period=day&date=yesterday?idSite=3&period=day&date=yesterday&category=Dashboard_Dashboard&subcategory=1" class="link">Collected Stats</a>
+					</div>
+				</div>
+			</div>
+			<div class="wrap">
